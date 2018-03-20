@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>ReadOnlyCollectionInterfaces</id>
+    <id>ReadOnlyCollectionInterfaces-signed</id>
     <version>1.0.0</version>
     <authors>Mauricio Scheffer</authors>
     <owners>mausch</owners>

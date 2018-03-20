@@ -43,11 +43,20 @@
   <PropertyGroup Condition=" '$(TargetFrameworkVersion)' == 'v4.5' ">
     <DefineConstants>NET45</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>meteoconsult.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Compile Include="Interfaces.cs" Condition=" '$(TargetFrameworkVersion)' != 'v4.5' "/>
-    <Compile Include="TypeForwarding.cs" Condition=" '$(TargetFrameworkVersion)' == 'v4.5' "/>
+    <Compile Include="Interfaces.cs" Condition=" '$(TargetFrameworkVersion)' != 'v4.5' " />
+    <Compile Include="TypeForwarding.cs" Condition=" '$(TargetFrameworkVersion)' == 'v4.5' " />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="meteoconsult.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
