@@ -4,7 +4,7 @@ foreach ($v in $versions) {
 	"================="
 	"Building for " + $v
 	"================="
-	msbuild /m ReadOnlyCollections.sln /p:TargetFrameworkVersion=$v /p:Configuration=Release
+	C:\Windows\Microsoft.NET\Framework\v4.0.30319\Msbuild.exe /m ReadOnlyCollections.sln /p:TargetFrameworkVersion=$v /p:Configuration=Release
 	if ($LASTEXITCODE -ne 0) { throw "error" }
 }
 .nuget\nuget.exe pack ReadOnlyCollectionsInterfaces.nuspec
