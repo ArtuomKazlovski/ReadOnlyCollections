@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 
 namespace ReadOnlyCollectionsExtensions.Wrappers {
+    [Serializable]
     public class ArraySegmentWrapper<T>: IReadOnlyList<T> {
         private class ArraySegmentEnumerator<T>: IEnumerator<T> {
             private readonly ArraySegment<T> source;

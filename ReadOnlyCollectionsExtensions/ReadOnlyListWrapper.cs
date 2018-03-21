@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace ReadOnlyCollectionsExtensions.Wrappers {
+    [Serializable]
     public class ReadOnlyListWrapper<T> : IReadOnlyList<T> {
         private readonly IList<T> list;
 
